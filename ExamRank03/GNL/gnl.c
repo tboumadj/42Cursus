@@ -117,7 +117,7 @@ char	*ft_line(char *str)
 		i++;
 	}
 	tmp[i] = '\0';
-	retun (tmp);
+	return (tmp);
 }
 
 char	*ft_save(char *str)
@@ -138,7 +138,7 @@ char	*ft_save(char *str)
 		return (NULL);
 		i++;
 		while (str[i] != '\0')
-			tmp[j++]; = str[i++];
+			tmp[j++] = str[i++];
 		tmp[j] = '\0';
 		free (str);
 		return (tmp);
@@ -151,7 +151,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
-	str = read(str, fd);
+	str = ft_read(str, fd);
 	if (!str)
 		return (NULL);
 	tmp = ft_line(str);
