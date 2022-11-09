@@ -1,21 +1,3 @@
-/*    main  uni <std + stdlib>
-
-static STR + char TMP
-return TMP
-SAVE apres \n dans STR
-
-Read le tout et save dans STR
-
-Save de str a TMP toiut ce kil y a juska \n
-
-separer avant \n et garder le reste dans STR 
-
-ft_strchr -> remonte la chaine juska trouver C et renvoi depuis ce pointeur
-
-ft_strlen -> parcours la chaine et renvoi index total
-
-ft_strjoin -> creer un malloc de s1 + s2 met dabord s1 puis s2
-*/
 
 #include "gnl.h"
 
@@ -75,7 +57,6 @@ char 	*ft_read(char *str, int fd)
 {
 	int c = 1;
 	char *tmp = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
-
 	if (!tmp)
 		return (NULL);
 	while (c != 0)
@@ -101,16 +82,21 @@ char 	*ft_read(char *str, int fd)
 char	*ft_line(char *str)
 {
 	int i = 0;
-	char *tmp =(char *)malloc(sizeof(char) * (i + 3));
-	if (!tmp)
-		return (NULL);
+	char *tmp;
+
 	if (str[i] == '\0')
 		return (NULL);
 	while (str[i] != '\n' && str[i] != '\0')
 		i++;
+	tmp = (char *)malloc(sizeof(char) * (i + 3));
+	if (!tmp)
+		return (NULL);
 	i = 0;
 	while (str[i] != '\n' && str[i] != '\0')
+	{
+		tmp[i] = str[i];
 		i++;
+	}
 	if (str[i] == '\n')
 	{
 		tmp[i] = str[i];
@@ -157,4 +143,25 @@ char	*get_next_line(int fd)
 	tmp = ft_line(str);
 	str = ft_save(str);
 	return (tmp);
+}
+
+int main(int argc, char **argv)
+{
+    int fd;
+    char *tmp;
+	int i = 0;
+
+    fd = open(argv[1], O_RDONLY);
+    if (fd == -1)
+        printf("ERROR FD\n");
+	//printf("%s\n", get_next_line(fd));
+	//get_next_line(fd);
+
+    while (i < 5)
+    {
+        tmp = get_next_line(fd);
+        printf("%s", tmp);
+        free (tmp);
+		i++;
+    }
 }
