@@ -122,12 +122,12 @@ char	*ft_save(char *str)
 	tmp = (char *)malloc(sizeof(char) * (ft_strlen(str) - i + 1));
 	if (!tmp)
 		return (NULL);
-		i++;
-		while (str[i] != '\0')
-			tmp[j++] = str[i++];
-		tmp[j] = '\0';
-		free (str);
-		return (tmp);
+	i++;
+	while (str[i] != '\0')
+		tmp[j++] = str[i++];
+	tmp[j] = '\0';
+	free (str);
+	return (tmp);
 }
 
 char	*get_next_line(int fd)
@@ -157,7 +157,7 @@ int main(int argc, char **argv)
 	//printf("%s\n", get_next_line(fd));
 	//get_next_line(fd);
 
-    while (i < 5)
+    while (i < 6)
     {
         tmp = get_next_line(fd);
         printf("%s", tmp);
