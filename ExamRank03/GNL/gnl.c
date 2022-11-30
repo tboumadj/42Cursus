@@ -154,14 +154,15 @@ int main(int argc, char **argv)
     fd = open(argv[1], O_RDONLY);
     if (fd == -1)
         printf("ERROR FD\n");
-	//printf("%s\n", get_next_line(fd));
-	//get_next_line(fd);
-
-    while (i < 6)
+    while (1)
     {
         tmp = get_next_line(fd);
+		if ( tmp == NULL)
+			{
+				free (tmp);
+				break ;
+			}
         printf("%s", tmp);
         free (tmp);
-		i++;
     }
 }
