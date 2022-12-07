@@ -45,6 +45,8 @@ int ft_printf(const char *format, ...)
 				ft_put_nbr((long long int)va_arg(arg, int), 10, &len);
 			else if (*format == 'x')
 				ft_put_nbr((long long int)va_arg(arg, unsigned int), 16, &len);
+			else if (*format == '%')
+				len += write(1, format, 1);
 		}
 		else
 			len += write(1, format, 1);
@@ -62,8 +64,8 @@ int main()
 	int d;
 	char a[] = "bonjour";
 
-	printf("%d\n", i);
-	ft_printf("%d\n", i);
+	printf("%%\n");
+	ft_printf("%%\n");
 	printf("%d\n", j);
 	ft_printf("%d\n", j);
 	printf("%s\n", a);

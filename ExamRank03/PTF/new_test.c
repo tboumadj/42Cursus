@@ -9,7 +9,7 @@ void	ft_putstr(char *str, int *len)
 	if (!str)
 		str = "(null)";
 	while (*str)
-		*len += write(1 , str++, 1);
+		*len += write(1, str++, 1);
 }
 
 void	ft_putnbr(long long int nbr, int base, int *len)
@@ -74,7 +74,4 @@ int main()
 	printf("%d\n", x);
 	z = ft_printf("%x\n", -777);
 	printf("%d\n", z);
-
-
-
 }
