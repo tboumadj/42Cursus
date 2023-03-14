@@ -1,0 +1,27 @@
+//HOMEBREW
+
+Mac:
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+42:
+curl -fsSL https://raw.githubusercontent.com/omimouni/42homebrew/master/install.sh | zsh
+
+//Valgrind
+brew tap LouisBrunner/valgrind
+brew install --HEAD LouisBrunner/valgrind/valgrind
+
+//RUST
+brew install rust
+
+//NVIM&LVIM
+brew install neovim
+brew installl lunarvim
+
+//Ccleaner42
+https://github.com/ombhd/Cleaner_42
+run ./CleanerInstaller.sh
+
+//UTILS LINK
+https://pythontutor.com/c.html#mode=edit
+https://cplusplus.com/
+https://en.cppreference.com/w/
