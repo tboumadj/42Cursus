@@ -25,3 +25,9 @@ run ./CleanerInstaller.sh
 https://pythontutor.com/c.html#mode=edit
 https://cplusplus.com/
 https://en.cppreference.com/w/
+
+
+//SCRIPT
+
+tell application "System Events"	tell appearance preferences		set dark mode to true	end tell	--set key repeat rate to 2	--tell keyboard preferences	--set key repeat to key repeat rate	--end tell	set volume with output mutedend tell
+
