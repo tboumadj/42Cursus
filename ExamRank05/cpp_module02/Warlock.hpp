@@ -17,8 +17,6 @@ class Warlock
   public:
     Warlock(std::string name, std::string title);
     ~Warlock();
-    Warlock(const Warlock &co);
-    Warlock &operator=(const Warlock &co);
 
     //G&S
     std::string   getName()const;
@@ -31,6 +29,10 @@ class Warlock
     void          launchSpell(std::string str, const ATarget &target);
 
   private:
+
+    Warlock();
+    Warlock(const Warlock &co);
+    Warlock &operator=(const Warlock &co);
     std::string _name;
     std::string _title;
     std::map<std::string, ASpell *> _list;

@@ -24,7 +24,7 @@ Fwoosh &Fwoosh::operator=(const Fwoosh &co)
   return (*this);
 }
 
-ASpell *Fwoosh::clone(void)const
+ASpell *Fwoosh::clone()const
 {
   return (new Fwoosh());
 }

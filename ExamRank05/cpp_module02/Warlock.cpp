@@ -1,5 +1,10 @@
 #include "Warlock.hpp"
 
+Warlock::Warlock()
+{
+  return ;
+}
+
 Warlock::Warlock(std::string name, std::string title): _name(name), _title(title)
 {
   std::cout << this->_name << ": This looks like another boring day." 
@@ -10,6 +15,11 @@ Warlock::Warlock(std::string name, std::string title): _name(name), _title(title
 Warlock::~Warlock()
 {
   std::cout << this->_name << ": My job here is done!" << std::endl;
+  for (std::map<std::string, ASpell*>::iterator it = _list.begin(); it != _list.end(); ++it)
+  {
+    delete it->second;
+  }
+  _list.clear();
   return ;
 }
 

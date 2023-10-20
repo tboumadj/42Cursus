@@ -1,5 +1,11 @@
 #include "Warlock.hpp"
 
+
+Warlock::Warlock()
+{
+  return ;
+}
+
 Warlock::Warlock(std::string name, std::string title): _name(name), _title(title)
 {
   std::cout << this->_name << ": This looks like another boring day." 
