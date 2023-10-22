@@ -1,6 +1,7 @@
 #ifndef TARGETGENERATOR_HPP
 #define TARGETGENERATOR_HPP
 
+#include <map>
 #include "ATarget.hpp"
 
 class ATarget;

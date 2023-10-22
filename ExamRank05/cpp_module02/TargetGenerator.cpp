@@ -38,7 +38,7 @@ void TargetGenerator::learnTargetType(ATarget *target)
 
 void TargetGenerator::forgetTargetType(const std::string &str)
 {
-  std::map<std::string, Atarget*>::iterator it = _target.find(str);
+  std::map<std::string, ATarget*>::iterator it = _target.find(str);
   if (it != _target.end())
   {
     delete it->second;
@@ -47,11 +47,11 @@ void TargetGenerator::forgetTargetType(const std::string &str)
   return ;
 }
 
-ATarget *TargetGenerator::createTarget(cosnt std::string &str)
+ATarget *TargetGenerator::createTarget(const std::string &str)
 {
   ATarget *tmp = NULL;
   if (_target.find(str) != _target.end())
     tmp = _target[str];
-  return ();
+  return (tmp);
 }
 
