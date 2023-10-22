@@ -7,6 +7,7 @@
 #include "SpellBook.hpp"
 #include "Polymorph.hpp"
 #include "Fireball.hpp"
+#include "TargetGenerator.hpp"
 
 int main()
 {

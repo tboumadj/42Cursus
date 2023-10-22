@@ -8,6 +8,7 @@
 # include <map>
 # include "ASpell.hpp"
 # include "ATarget.hpp"
+# include "SpellBook.hpp"
 
 class ATarget;
 class ASpell;
@@ -33,9 +34,10 @@ class Warlock
     Warlock();
     Warlock(const Warlock &co);
     Warlock &operator=(const Warlock &co);
+
     std::string _name;
     std::string _title;
-    std::map<std::string, ASpell *> _list;
+    SpellBook   _book;
   };
 #endif
 
