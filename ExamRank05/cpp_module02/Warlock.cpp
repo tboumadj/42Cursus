@@ -1,4 +1,5 @@
 #include "Warlock.hpp"
+#include <unistd.h>
 
 Warlock::Warlock()
 {
@@ -72,7 +73,14 @@ void Warlock::forgetSpell(std::string str)
 
 void Warlock::launchSpell(std::string str, const ATarget &target)
 {
-  if (_book.createSpell(str))
-    _book.createSpell(str)->launch(target);
+  //if (_book.createSpell(str))
+  //  _book.createSpell(str)->launch(target);
+  ASpell *tmp;
+  tmp = _book.createSpell(str);
+  if (tmp != NULL)
+  {
+    (*tmp).launch(target); //BUG
+    //delete tmp;
+  }
   return ;
 }

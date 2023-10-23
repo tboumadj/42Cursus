@@ -54,6 +54,9 @@ ASpell* SpellBook::createSpell(const std::string &str)
 {
   ASpell *tmp = NULL;
   if (_list.find(str) != _list.end())
+    {
     tmp = _list[str];
-  return (tmp);
+    return (tmp);
+    }
+  return (NULL);
 }

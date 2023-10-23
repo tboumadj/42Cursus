@@ -10,8 +10,6 @@
 # include "ATarget.hpp"
 # include "SpellBook.hpp"
 
-class ATarget;
-class ASpell;
 
 class Warlock
 {
