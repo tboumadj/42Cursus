@@ -1,7 +1,7 @@
 #ifndef FWOOSH_HPP
 # define FWOOSH_HPP
 
-#pragma once
+//#pragma once
 #include "ASpell.hpp"
 
 class Fwoosh : public ASpell

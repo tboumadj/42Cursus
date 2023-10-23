@@ -1,7 +1,7 @@
 #ifndef WARLOCK_HPP
 # define WARLOCK_HPP
 
-#pragma once
+//#pragma once
 # include <iostream>
 # include <ostream>
 # include <string>

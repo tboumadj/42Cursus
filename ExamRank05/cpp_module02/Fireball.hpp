@@ -1,7 +1,7 @@
 #ifndef FIREBALL_HPP
 # define FIREBALL_HPP
 
-#pragma once
+//#pragma once
 #include "ASpell.hpp"
 
 class Fireball : public ASpell

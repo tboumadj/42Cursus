@@ -23,7 +23,9 @@ TargetGenerator::TargetGenerator(const TargetGenerator &co)
 TargetGenerator &TargetGenerator::operator=(const TargetGenerator &co)
 {
   if ( this != &co)
-    *this = co;
+  {
+    this->_target = co._target;
+  }
   return (*this);
 }
 
@@ -31,7 +33,7 @@ void TargetGenerator::learnTargetType(ATarget *target)
 {
   if (target)
   {
-    _target[target->getType()] = target->clone();
+    _target[target->getType()] = target;
   }
   return ;
 }
@@ -49,9 +51,11 @@ void TargetGenerator::forgetTargetType(const std::string &str)
 
 ATarget *TargetGenerator::createTarget(const std::string &str)
 {
-  ATarget *tmp = NULL;
+  ATarget* tmp = NULL;
   if (_target.find(str) != _target.end())
+  {
     tmp = _target[str];
+  }
   return (tmp);
 }
 

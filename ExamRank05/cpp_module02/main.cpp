@@ -30,8 +30,8 @@ int main()
   std::cout << wall->getType() << "PPPPPPPP" << std::endl;
 
   richard.introduce();
-  richard.launchSpell("Polymorph", *wall);
-  richard.launchSpell("Fireball", *wall);
+  //richard.launchSpell("Polymorph", *wall);
+  //richard.launchSpell("Fireball", *wall);
 }
 
 

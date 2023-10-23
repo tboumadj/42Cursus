@@ -1,7 +1,7 @@
 #ifndef TARGETGENERATOR_HPP
 #define TARGETGENERATOR_HPP
 
-#pragma once
+//#pragma once
 #include <map>
 #include "ATarget.hpp"
 

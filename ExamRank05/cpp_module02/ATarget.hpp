@@ -1,11 +1,11 @@
 #ifndef ATARGET_HPP
 #define ATARGET_HPP
 
-#pragma once
+//#pragma once
 # include <iostream>
 # include <ostream>
 # include <string>
-# include "ASpell.hpp"
+//# include "ASpell.hpp"
 
 class ASpell;
 
@@ -26,5 +26,7 @@ class ATarget
   protected:
     std::string _type;
   };
+
+# include "ASpell.hpp"
 
 #endif

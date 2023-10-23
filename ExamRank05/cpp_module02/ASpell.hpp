@@ -1,11 +1,11 @@
 #ifndef ASPELL_HPP
 # define ASPELL_HPP
 
-#pragma once
+//#pragma once
 # include <iostream>
 # include <ostream>
 # include <string>
-# include "ATarget.hpp"
+//# include "ATarget.hpp"
 
 class ATarget;
 
@@ -28,5 +28,7 @@ class ASpell
     std::string _name;
     std::string _effects;
   };
+
+#include "ATarget.hpp"
 
 #endif

@@ -1,7 +1,7 @@
 #ifndef POLYMORPH_HPP
 # define POLYMORPH_HPP
 
-#pragma once
+//#pragma once
 # include "ASpell.hpp"
 
 class Polymorph: public ASpell

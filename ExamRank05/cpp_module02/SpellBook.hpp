@@ -1,7 +1,7 @@
 #ifndef SPELLBOOK_HPP
 # define SPELLBOOK_HPP
 
-#pragma once
+//#pragma once
 #include <map>
 #include "ASpell.hpp"
 

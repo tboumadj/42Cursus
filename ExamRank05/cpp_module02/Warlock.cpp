@@ -1,5 +1,4 @@
 #include "Warlock.hpp"
-#include <unistd.h>
 
 Warlock::Warlock()
 {
@@ -80,7 +79,7 @@ void Warlock::launchSpell(std::string str, const ATarget &target)
   if (tmp != NULL)
   {
     (*tmp).launch(target); //BUG
-    //delete tmp;
+    delete tmp;
   }
   return ;
 }
