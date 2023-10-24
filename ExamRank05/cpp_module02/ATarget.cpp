@@ -18,11 +18,11 @@ ATarget::ATarget(const ATarget &co)
 
 ATarget &ATarget::operator=(const ATarget &co)
 {
-  //if (this != &co)
-  //{
-  //  *this = co;
-  //}
-  _type = co.getType();
+  if (this != &co)
+  {
+    *this = co;
+  }
+  //_type = co._type;
   return (*this);
 }
 

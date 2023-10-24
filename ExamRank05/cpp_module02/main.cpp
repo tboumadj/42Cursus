@@ -24,12 +24,15 @@ int main()
   Fireball* fireball = new Fireball();
 
   richard.learnSpell(fireball);
+  
 
   ATarget* wall = tarGen.createTarget("Inconspicuous Red-brick Wall");
 
-  //std::cout << wall->getType() << "PPPPPPPP" << std::endl;
+  //std::cout << wall  << std::endl;
+  //std::cout << "ici" << std::endl;
 
   richard.introduce();
+  
   richard.launchSpell("Polymorph", *wall);
   richard.launchSpell("Fireball", *wall);
 }

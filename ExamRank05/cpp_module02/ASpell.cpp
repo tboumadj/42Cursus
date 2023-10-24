@@ -18,12 +18,12 @@ ASpell::ASpell(const ASpell &co)
 
 ASpell &ASpell::operator=(const ASpell &co)
 {
-  //if (this != &co)
-  //{
-  //  *this = co;
-  //}
-  this->_name = co.getName();
-  this->_effects = co.getEffects();
+  if (this != &co)
+  {
+    *this = co;
+  }
+  //this->_name = co.getName();
+  //this->_effects = co.getEffects();
   return (*this);
 }
 

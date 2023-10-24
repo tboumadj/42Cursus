@@ -7,11 +7,11 @@ TargetGenerator::TargetGenerator()
 
 TargetGenerator::~TargetGenerator()
 {
-  for(std::map<std::string, ATarget*>::iterator it = _target.begin(); it != _target.end(); ++it)
-  {
-    delete it->second;
-  }
-  _target.clear();
+  //for(std::map<std::string, ATarget*>::iterator it = _target.begin(); it != _target.end(); ++it)
+  //{
+  //  delete it->second;
+  //}
+  _target.clear() ;
   return ;
 }
 
@@ -22,11 +22,11 @@ TargetGenerator::TargetGenerator(const TargetGenerator &co)
 
 TargetGenerator &TargetGenerator::operator=(const TargetGenerator &co)
 {
-  //if ( this != &co)
-  //{
-  //  *this = co;
-  //}
-  this->_target = co._target;
+  if ( this != &co)
+  {
+    *this = co;
+  }
+  //this->_target = co._target;
   return (*this);
 }
 

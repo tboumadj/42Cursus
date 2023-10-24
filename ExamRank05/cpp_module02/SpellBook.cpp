@@ -23,11 +23,11 @@ SpellBook::SpellBook(const SpellBook &co)
 
 SpellBook &SpellBook::operator=(const SpellBook &co)
 {
-  //if (this != &co)
-  //{
-  // *this = co;
-  //}
-  this->_list = co._list;
+  if (this != &co)
+  {
+   *this = co;
+  }
+  //this->_list = co._list;
   return (*this);
 }
 
