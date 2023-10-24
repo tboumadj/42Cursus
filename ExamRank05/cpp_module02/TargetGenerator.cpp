@@ -48,7 +48,7 @@ void TargetGenerator::forgetTargetType(const std::string &str)
   //  _target.erase(it);
   //}
   if (_target.find(str) != _target.end())
-    _target.erase(_target.find(target));
+    _target.erase(_target.find(str));
   return ;
 }
 
