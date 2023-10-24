@@ -14,7 +14,7 @@ class Warlock
     //G&S
     const std::string   &getName()const;
     const std::string   &getTitle()const;
-    void          setTitle(std::string str);
+    void          setTitle(const std::string &str);
 
     void          introduce() const;
 
