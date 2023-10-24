@@ -35,12 +35,12 @@ Warlock &Warlock::operator=(const Warlock &co)
 
 //G&S
 
-std::string Warlock::getName()const
+const std::string &Warlock::getName()const
 {
   return (this->_name);
 }
 
-std::string Warlock::getTitle()const
+const std::string &Warlock::getTitle()const
 {
   return (this->_title);
 }
