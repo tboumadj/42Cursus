@@ -1,18 +1,16 @@
 #ifndef FWOOSH_HPP
 # define FWOOSH_HPP
 
-#pragma once
+//#pragma once
 #include "ASpell.hpp"
 
 class Fwoosh : public ASpell
 {
   public:
     Fwoosh();
-    virtual ~Fwoosh();
-    Fwoosh(const Fwoosh &co);
-    Fwoosh &operator=(const Fwoosh &co);
+    ~Fwoosh();
 
-    virtual ASpell *clone()const;
+    ASpell *clone()const;
   };
 
 #endif

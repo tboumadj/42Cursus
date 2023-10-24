@@ -23,6 +23,7 @@ class Warlock
     Warlock();
     Warlock(const Warlock &co);
     Warlock &operator=(const Warlock &co);
+
     std::string _name;
     std::string _title;
   };

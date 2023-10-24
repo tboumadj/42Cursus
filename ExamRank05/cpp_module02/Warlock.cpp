@@ -25,12 +25,12 @@ Warlock::Warlock(const Warlock &co)
 
 Warlock &Warlock::operator=(const Warlock &co)
 {
-  //if (this != &co)
-  //{
-  //  *this = co;
-  //}
-  this->_name = co._name;
-  this->_title = co._title;
+  if (this != &co)
+  {
+    *this = co;
+  }
+  //this->_name = co._name;
+  //this->_title = co._title;
   return (*this);
 }
 
@@ -78,7 +78,7 @@ void Warlock::launchSpell(std::string str, const ATarget &target)
   //tmp = _book.createSpell(str);
   //if (tmp != NULL)
   //{
-  //  (*tmp).launch(target); //BUG
+  //  (*tmp).launch(target);
   //  delete tmp;
   //}
   return ;
