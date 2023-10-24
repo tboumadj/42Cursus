@@ -22,10 +22,11 @@ TargetGenerator::TargetGenerator(const TargetGenerator &co)
 
 TargetGenerator &TargetGenerator::operator=(const TargetGenerator &co)
 {
-  if ( this != &co)
-  {
-    this->_target = co._target;
-  }
+  //if ( this != &co)
+  //{
+  //  *this = co;
+  //}
+  this->_target = co._target;
   return (*this);
 }
 
@@ -40,12 +41,14 @@ void TargetGenerator::learnTargetType(ATarget *target)
 
 void TargetGenerator::forgetTargetType(const std::string &str)
 {
-  std::map<std::string, ATarget*>::iterator it = _target.find(str);
-  if (it != _target.end())
-  {
-    delete it->second;
-    _target.erase(it);
-  }
+  //std::map<std::string, ATarget*>::iterator it = _target.find(str);
+  //if (it != _target.end())
+  //{
+  //  delete it->second;
+  //  _target.erase(it);
+  //}
+  if (_target.find(str) != _target.end())
+    _target.erase(_target.find(target));
   return ;
 }
 

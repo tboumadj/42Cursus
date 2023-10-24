@@ -11,6 +11,9 @@ class ASpell;
 
 class ATarget
 {
+  protected:
+    std::string _type;
+
   public:
     ATarget(std::string type);
     virtual ~ATarget();
@@ -23,8 +26,6 @@ class ATarget
     virtual ATarget *clone()const =0;
     void    getHitBySpell(ASpell const &spell)const;
 
-  protected:
-    std::string _type;
   };
 
 # include "ASpell.hpp"

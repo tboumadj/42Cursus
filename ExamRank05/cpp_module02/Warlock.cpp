@@ -5,10 +5,9 @@ Warlock::Warlock()
   return ;
 }
 
-Warlock::Warlock(std::string name, std::string title): _name(name), _title(title)
+Warlock::Warlock(std::string name, std::string title) : _name(name), _title(title)
 {
-  std::cout << this->_name << ": This looks like another boring day." 
-    << std::endl;
+  std::cout << this->_name << ": This looks like another boring day." << std::endl;
   return ;
 }
 
@@ -26,10 +25,12 @@ Warlock::Warlock(const Warlock &co)
 
 Warlock &Warlock::operator=(const Warlock &co)
 {
-  if (this != &co)
-  {
-    *this = co;
-  }
+  //if (this != &co)
+  //{
+  //  *this = co;
+  //}
+  this->_name = co._name;
+  this->_title = co._title;
   return (*this);
 }
 
@@ -53,8 +54,7 @@ void Warlock::setTitle(std::string str)
 
 void Warlock::introduce() const
 {
-  std::cout << this->_name << ": I am " << this->_name <<
-    ", " << this->_title <<"!" << std::endl;
+  std::cout << this->_name << ": I am " << this->_name << ", " << this->_title <<"!" << std::endl;
   return ;
 }
 
@@ -72,14 +72,14 @@ void Warlock::forgetSpell(std::string str)
 
 void Warlock::launchSpell(std::string str, const ATarget &target)
 {
-  //if (_book.createSpell(str))
-  //  _book.createSpell(str)->launch(target);
-  ASpell *tmp;
-  tmp = _book.createSpell(str);
-  if (tmp != NULL)
-  {
-    (*tmp).launch(target); //BUG
-    delete tmp;
-  }
+  if (_book.createSpell(str))
+    _book.createSpell(str)->launch(target);
+  //ASpell *tmp;
+  //tmp = _book.createSpell(str);
+  //if (tmp != NULL)
+  //{
+  //  (*tmp).launch(target); //BUG
+  //  delete tmp;
+  //}
   return ;
 }

@@ -23,10 +23,11 @@ SpellBook::SpellBook(const SpellBook &co)
 
 SpellBook &SpellBook::operator=(const SpellBook &co)
 {
-  if (this != &co)
-  {
-    *this = co;
-  }
+  //if (this != &co)
+  //{
+  // *this = co;
+  //}
+  this->_list = co._list;
   return (*this);
 }
 
@@ -52,11 +53,15 @@ void SpellBook::forgetSpell(const std::string &str)
 
 ASpell* SpellBook::createSpell(const std::string &str)
 {
-  ASpell *tmp = NULL;
+  //ASpell *tmp = NULL;
+  //if (_list.find(str) != _list.end())
+  // {
+  //  tmp = _list[str];
+  //  return (tmp);
+  //  }
+  //return (NULL);
+  ASpell* tmp = NULL;
   if (_list.find(str) != _list.end())
-    {
     tmp = _list[str];
-    return (tmp);
-    }
-  return (NULL);
+  return (tmp);
 }

@@ -9,6 +9,11 @@ class ATarget;
 
 class TargetGenerator
 {
+  private:
+    TargetGenerator(const TargetGenerator &co);
+    TargetGenerator &operator=(const TargetGenerator &co);
+    std::map<std::string, ATarget*> _target;
+
   public:
     TargetGenerator();
     ~TargetGenerator();
@@ -16,10 +21,6 @@ class TargetGenerator
     void forgetTargetType(const std::string &str);
     ATarget* createTarget(const std::string &str);
 
-  private:
-    TargetGenerator(const TargetGenerator &co);
-    TargetGenerator &operator=(const TargetGenerator &co);
-    std::map<std::string, ATarget*> _target;
   };
 
 #endif

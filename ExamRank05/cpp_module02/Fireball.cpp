@@ -10,20 +10,6 @@ Fireball::~Fireball()
   return ;
 }
 
-Fireball::Fireball(const Fireball &co): ASpell(co)
-{
-  return ;
-}
-
-Fireball &Fireball::operator=(const Fireball &co)
-{
-  if (this != &co)
-  {
-    *this = co;
-  }
-  return (*this);
-}
-
 ASpell *Fireball::clone(void)const
 {
   return (new Fireball());

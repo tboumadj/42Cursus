@@ -7,6 +7,11 @@
 
 class SpellBook
 {
+  private:
+    SpellBook(const SpellBook &co);
+    SpellBook &operator=(const SpellBook &co);
+    std::map<std::string, ASpell*> _list;
+
   public:
     SpellBook();
     ~SpellBook();
@@ -15,10 +20,6 @@ class SpellBook
     void forgetSpell(const std::string &str);
     ASpell* createSpell(const std::string &str);
     
-  private:
-    SpellBook(const SpellBook &co);
-    SpellBook &operator=(const SpellBook &co);
-    std::map<std::string, ASpell*> _list;
   };
 
 #endif

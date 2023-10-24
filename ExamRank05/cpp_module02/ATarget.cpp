@@ -18,10 +18,11 @@ ATarget::ATarget(const ATarget &co)
 
 ATarget &ATarget::operator=(const ATarget &co)
 {
-  if (this != &co)
-  {
-    _type = co._type;
-  }
+  //if (this != &co)
+  //{
+  //  *this = co;
+  //}
+  _type = co.getType();
   return (*this);
 }
 
@@ -32,6 +33,6 @@ std::string ATarget::getType()const
 
 void ATarget::getHitBySpell(ASpell const &spell)const
 {
-  std::cout << this->_type << " has been " << spell.getEffects() << "!" << std::endl;
+  std::cout << this->getType() << " has been " << spell.getEffects() << "!" << std::endl; //si bug this->_type
   return ;
 }

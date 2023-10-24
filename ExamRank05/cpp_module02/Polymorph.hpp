@@ -8,9 +8,7 @@ class Polymorph: public ASpell
 {
   public:
     Polymorph();
-    virtual ~Polymorph();
-    Polymorph(const Polymorph &co);
-    Polymorph &operator=(const Polymorph &co);
+    ~Polymorph();
 
     virtual ASpell *clone()const;
   };

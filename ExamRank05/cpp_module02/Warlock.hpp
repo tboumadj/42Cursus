@@ -13,6 +13,16 @@
 
 class Warlock
 {
+  private:
+
+    Warlock();
+    Warlock(const Warlock &co);
+    Warlock &operator=(const Warlock &co);
+
+    std::string _name;
+    std::string _title;
+    SpellBook   _book;
+
   public:
     Warlock(std::string name, std::string title);
     ~Warlock();
@@ -27,15 +37,6 @@ class Warlock
     void          forgetSpell(std::string str);
     void          launchSpell(std::string str, const ATarget &target);
 
-  private:
-
-    Warlock();
-    Warlock(const Warlock &co);
-    Warlock &operator=(const Warlock &co);
-
-    std::string _name;
-    std::string _title;
-    SpellBook   _book;
   };
 #endif
 

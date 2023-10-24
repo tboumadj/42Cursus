@@ -8,11 +8,9 @@ class Fireball : public ASpell
 {
   public:
     Fireball();
-    virtual ~Fireball();
-    Fireball(const Fireball &co);
-    Fireball &operator=(const Fireball &co);
+    ~Fireball();
 
-    virtual ASpell *clone()const;
+    ASpell *clone()const;
   };
 
 #endif
