@@ -1,0 +1,21 @@
+
+
+
+
+Warlock         |
+                | -  coplean pas de copie defaut private
+
+-------------------------------
+SpellBook       | - coplean pas de copie + map private
+TargetGnerator  | 
+-------------------------------
+ASpell          |   
+ATarget         | - coplean + variable protected + virtual *clone = 0;
+
+-------------------------------
+Fwoosh          | - construc/destruct + *clone()const ->public ASpell 
+BrickWall       |                                     ->public ATarget
+Dummy           |                                     ->public ATarget
+Fireball        |                                     ->public ASpell
+Polymorph       |                                     ->public ASpell
+
