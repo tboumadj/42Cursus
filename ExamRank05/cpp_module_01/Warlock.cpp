@@ -12,6 +12,11 @@ Warlock::~Warlock()
 Warlock::Warlock(std::string name, std::string title): _name(name), _title(title)
 {
   std::cout << this->_name << ": This looks like another boring day." << std::endl;
+  for(std::map<std::string, ASpell*>::iterator it = this->_list.begin(); it != this->_list.end(); ++it)
+    {
+      delete it->second;
+    }
+  this->_list.clear();
 }
 
 Warlock::Warlock(const Warlock &co)
