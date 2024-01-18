@@ -9,8 +9,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int_max_fd = 0;
-int_count = 0;
+int max_fd = 0;
+int count = 0;
 int ids[65000];
 char *msgs[65000];
 fd_set rfds, wfds, afds;
